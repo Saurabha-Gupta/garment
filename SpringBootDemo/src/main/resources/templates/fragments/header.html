@@ -1,0 +1,130 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <div th:fragment="header-css">
+        <!-- this is header-css -->
+        
+        <link rel="stylesheet" type="text/css"
+              href="webjars/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" th:href="@{/css/main.css}"
+              href="../../css/main.css" />
+              
+     
+	 <link rel="stylesheet" th:href="@{/css/style.css}"
+              href="../../css/style.css" />
+	 
+    </div>
+</head>
+<body>
+<!-- <div th:fragment="header">
+    this is header
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" th:href="@{/}">Spring Boot</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a th:href="@{/}">Home</a></li>
+                </ul>
+                <ul class="topcorner nav navbar-nav">
+                    <li class="active"><a th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div> -->
+
+  <div th:fragment="header">
+	  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+		  <a class="navbar-brand" href="#">Anabh Center</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+			  <li class="nav-item active">
+				<a class="nav-link" th:href="@{/dashboard}">Home <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mens Wear</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" th:href="@{/shirt}">Shirts</a>
+				  <a class="dropdown-item" href="#">Jeans</a>
+				  <a class="dropdown-item" href="#">T-Shirts</a>
+				  <a class="dropdown-item" href="#">Kurta</a>
+				  <a class="dropdown-item" href="#">Pajama</a>
+				</div>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Womens Wear</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Top</a>
+				  <a class="dropdown-item" href="#">Jeans</a>
+				  <a class="dropdown-item" href="#">T-Shirts</a>
+				  <a class="dropdown-item" href="#">Kurta</a>
+				  <a class="dropdown-item" href="#">Plajo</a>
+				  <a class="dropdown-item" href="#">Under garments</a>
+				</div>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kids Wear</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Shirt</a>
+				  <a class="dropdown-item" href="#">Jeans</a>
+				  <a class="dropdown-item" href="#">T-Shirts</a>
+				  <a class="dropdown-item" href="#">Kurta</a>
+				  <a class="dropdown-item" href="#">Pajama</a>
+				  <a class="dropdown-item" href="#">Under garments</a>
+				</div>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Beauty Queen</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Face Kit</a>
+				  <a class="dropdown-item" href="#">Body Kit</a>
+				  <a class="dropdown-item" href="#">Hair Kit</a>
+				</div>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Handsome Boy</a>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Face Kit</a>
+				  <a class="dropdown-item" href="#">Body Kit</a>
+				  <a class="dropdown-item" href="#">Hair Kit</a>
+				</div>
+			  </li>
+			  
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Contact Us</a>
+			  </li>
+			  <li class="nav-item">
+			 	 <a class = "nav-link" th:href="@{/logout}">Logout</a> 
+			  </li>
+			  
+			</ul>
+			
+		  </div>
+		  
+			<form class="form-inline">
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				
+			</form>
+		</nav>
+  </div>
+    <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

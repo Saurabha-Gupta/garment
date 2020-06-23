@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Anabh Portal</title>
+    <div th:replace="fragments/header :: header-css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+<br/>
+<br/>
+<br/>
+<div class="container">
+
+    <div class="row">
+        <div class = "col-sm-3">
+          <img src = "img/Male.jpg" class="img-thumbnail"></img>
+        </div>
+        <div class = "col-sm-3">
+          <img src = "img/Female.jpg" class="img-thumbnail"></img>
+        </div>
+        <div class = "col-sm-3">
+          <img src = "img/Kids.jpg" class="img-thumbnail"></img>
+        </div>
+        <div class="col-sm-3 ml-sm-auto jumbotron">
+            <form th:action="@{/login}" method="post">
+                <fieldset>
+                    <h4><span class = "badge badge-secondary">Login|New User</span></h3>
+
+                    <div th:if="${error}">
+                        <div class="alert alert-danger">
+                            Invalid username and password.
+                        </div>
+                    </div>
+                    <div th:if="${param.logout}">
+                        <div class="alert alert-info">
+                            You have been logged out.
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="username" id="userId" class="form-control input-lg"
+                               placeholder="UserId" required="true" autofocus="true"/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" class="form-control input-lg"
+                               placeholder="Password" required="true"/>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Login"/>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                       		 <input type="submit" class="btn btn-lg btn-primary btn-block" value="Signup"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class = "row">
+       <div class = "col-sm-3">
+          <img src = "img/Jessica.jpg" class="img-thumbnail"></img>
+        </div>
+        <div class = "col-sm-3">
+          <img src = "img/Jacket.png" class="img-thumbnail"></img>
+        </div>
+        <div class = "col-sm-3">
+          <img src = "img/GirlsStatue.jpg" class="img-thumbnail"></img>
+        </div>
+    </div>
+
+</div>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

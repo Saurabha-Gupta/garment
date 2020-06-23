@@ -1,0 +1,26 @@
+.mborder {
+
+	border : 1px solid;
+	
+
+}
+.mcontainer {
+	height : 630px;
+	
+}	
+
+.mcol-1 {
+	text-align : center;
+}
+.mcol-2 {
+	background : yellow;
+	height : 200px;
+}
+.mcol-3 {
+	background : purple;
+	height : 200px;
+}
+.manchor {
+	a 
+}
+
